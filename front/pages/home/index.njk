@@ -1,0 +1,20 @@
+{% set app = 'home' %}
+{% extends 'layouts/default.njk' %}
+
+{% import 'partials/home.njk' as partial %}
+
+{% block content %}
+
+	<main class="layout">
+
+		<section class="sidebar">
+			{{ partial.welcome() }}
+		</section>
+
+		<section class="content">
+			{{ partial.content( value = 0 ) }}
+		</section>
+
+	</main>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% macro counter( value = 0 ) %}
+	<form class="counter" data-component="counter">
+		<div class="holder">
+			<input type="number" name="counter" value="{{ value }}" readonly />
+			<button type="button" value="subtract">-</button>
+			<button type="button" value="add">+</button>
+		</div>
+	</form>
+{% endmacro %}

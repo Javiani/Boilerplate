@@ -1,0 +1,23 @@
+{% from 'components/counter/index.njk' import counter %}
+{% from 'components/box/index.njk' import box %}
+
+{% macro welcome() %}
+	{{ box( html_welcome ) }}
+{% endmacro %}
+
+{% macro content( value = 0 ) %}
+	{{ box( html_counter ) }}
+{% endmacro %}
+
+{# Content Data #}
+
+{% set html_welcome %}
+	<h1>Simplicity</h1>
+	<p>This is just a simple boilerplate using <strong>Stylus</strong> as css preprocessor and <a href="https://github.com/jails-org/Jails" target="_blank">Jails</a> as javascript component library</p>
+	<p>For Grid, this boilerplate uses a simple, small and expressive grid system called <a href="https://github.com/Javiani/LiquidGrid" target="_blank">Liquid Grid</a>, available for <strong>Sass</strong> and <strong>Stylus</strong>.</p>
+{% endset %}
+
+{% set html_counter %}
+	<h1>Counter</h1>
+	{{ counter( value ) }}
+{% endset %}

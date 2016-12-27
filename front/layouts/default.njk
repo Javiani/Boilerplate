@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Boilerplate</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
+		<link rel="icon" href="/images/favicon.ico" />
+
+		{% block styles %}
+			<link rel="stylesheet" type="text/css" href="/css/{{ app }}.css" />
+		{% endblock %}
+
+		{% block asyncscripts %}
+			<script type="text/javascript" data-application="/js/{{ app }}/index.min.js" id="main-script" src="/js/main.min.js" async defer></script>
+		{% endblock %}
+	</head>
+
+	{% from 'components/header/index.njk' import header %}
+	{% from 'components/third-party/index.njk' import thirdparty %}
+
+	<body>
+
+		{% block header %}
+			{{ header() }}
+		{% endblock %}
+
+		{% block content %}{% endblock %}
+
+		{% block scripts %}
+			{{ thirdparty() }}
+		{% endblock %}
+	</body>
+</html>
