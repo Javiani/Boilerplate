@@ -24,7 +24,7 @@ app.get( '/:page', ( req, res ) =>
 
 app.use( ( req, res ) =>{
 	if (req.originalUrl === '/')
-		res.redirect('page/home')
+		res.redirect('pages/home/index')
 })
 
 app.listen( 3000 )
