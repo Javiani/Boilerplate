@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 	"server":"babel-node server/index --presets es2015",
-	"watch": "npm run watch:js & npm run watch:css &",
-    "watch:js:dev": "webpack --watch --dev",
-    "watch:js": "webpack --watch",
-    "watch:css": "stylus -w front/pages/**/* --out dist/css --include front --include node_modules"
+	"watch":"webpack --watch"
   },
   "author": "Javiani",
   "license": "ISC",
@@ -23,13 +20,17 @@
     "glob": "^7.0.0",
     "nunjucks": "^3.0.0",
     "stylus": "^0.54.5",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+	"css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.1",
+    "stylus-loader": "^2.4.0"
   },
   "devDependencies": {
-    "jails-components": "git://github.com/jails-org/Components.git#v2",
-    "jails-js": "^2.1.7",
-    "jails-modules": "git://github.com/jails-org/Modules.git#v2",
+    "jails-components": "git://github.com/jails-org/Components.git#2.2.0",
+    "jails-js": "^2.2.2",
+    "jails-modules": "git://github.com/jails-org/Modules.git#2.2.0",
     "scriptjs": "^2.5.8",
-    "liquid-grid": "git://github.com/Javiani/LiquidGrid"
+    "liquid-grid": "git://github.com/Javiani/LiquidGrid.git#0.1.1"
   }
 }

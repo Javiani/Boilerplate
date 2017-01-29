@@ -9,11 +9,11 @@
 		<link rel="icon" href="/images/favicon.ico" />
 
 		{% block styles %}
-			<link rel="stylesheet" type="text/css" href="/css/{{ app }}.css" />
+			<link rel="stylesheet" type="text/css" href="/{{ app }}/index.css" />
 		{% endblock %}
 
 		{% block asyncscripts %}
-			<script type="text/javascript" data-application="/js/{{ app }}/index.min.js" id="main-script" src="/js/main.min.js" async defer></script>
+			<script type="text/javascript" data-application="/{{app}}/index.js" id="main-script" src="/main.js" async defer></script>
 		{% endblock %}
 	</head>
 
